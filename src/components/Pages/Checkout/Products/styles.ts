@@ -24,7 +24,6 @@ const styles = (Component: React.FunctionComponent<IProps>) => styled(Component)
     display: flex;
     flex-wrap: wrap;
     margin: -12px;
-    padding-bottom: 40px;
 
     & .products-empty {
       font-size: 13px;
@@ -41,6 +40,10 @@ const styles = (Component: React.FunctionComponent<IProps>) => styled(Component)
       margin: 12px;
       background-color: #fff;
       position: relative;
+
+      @media screen and (max-width: 500px) {
+        width: 100%;
+      }
 
       &:hover {
         & .product-info {
@@ -117,6 +120,18 @@ const styles = (Component: React.FunctionComponent<IProps>) => styled(Component)
           visibility: hidden;
           user-select: none;
           transition: all 0.2s linear;
+
+          @media screen and (max-width: 500px) {
+            opacity: 1;
+            visibility: visible;
+            user-select: auto;
+            background: none;
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: none;
+            margin-top: 15px;
+          }
 
           & button {
             width: 200px;

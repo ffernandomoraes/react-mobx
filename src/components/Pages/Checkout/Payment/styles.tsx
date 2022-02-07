@@ -7,6 +7,12 @@ const styles = (Component: React.FunctionComponent<IProps>) => styled(Component)
   padding: 0 16px;
   min-height: 300px;
 
+  @media screen and (max-width: 768px) {
+    margin-top: 20px;
+    padding: 0;
+    padding-bottom: 50px;
+  }
+
   & .payment-title {
     font-size: 13px;
     color: #000;
